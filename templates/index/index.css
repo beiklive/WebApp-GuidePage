@@ -1,0 +1,52 @@
+.myCard{
+    height: 110px;
+    margin-top: 10px;
+    text-shadow: 0 2px 2px rgb(0 0 0 / 30%);
+    font: bold 25px "Helvetica Neue", Helvetica, sans-serif;
+    border-radius: 6px;
+    background: #79a78c;
+    box-shadow:  5px 5px 10px #e7e7e7,
+             -5px -5px 10px #ffffff;
+    /* cursor:pointer； */
+    transition: 0.3s;
+
+}
+
+.myCard:hover{
+    background: #a7beae;
+
+}
+.DJ_p_row{
+    margin-top: 32px;
+    margin-left: 15px;
+}
+.DJ_icon {
+    width: 100px;
+    height: 100px;
+    padding: 3px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+    margin: 0 auto 10px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    /* overflow: hidden; */
+}
+
+.DJ_icon img{
+    width: 100px;
+    height: 100px;
+    border-radius: 30%;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.3);
+
+}
+
+a:link { 
+    color: #000000; 
+    text-decoration: none; 
+} 
+a:visited { 
+    color: #000000; 
+    text-decoration: none; 
+} 
+a:hover { 
+    text-decoration: underline; 
+} 

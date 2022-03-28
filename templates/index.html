@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+ 
+	<head>
+		<title>导航页</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<script src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js"></script>
+    	<!-- 样式表 -->
+        <link href="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.staticfile.org/twitter-bootstrap/5.1.1/js/bootstrap.bundle.min.js"></script>
+    	<link rel="stylesheet" href="{{ static_url('index/index.css') }}">
+    	<!-- <link rel="stylesheet" href="./index/index.css"> -->
+
+	</head>
+ 
+	<body>
+        <!-- 顶栏 -->
+        <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="javascript:void(0)">导航</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+        </nav>
+          
+        <!-- 正文 -->
+        <div class="container mt-3">
+            {% for i in range(0, data[0]['LineCount']) %}
+                <div class="row">
+                    {% for j in range(i*data[0]['ColCount'], (i+1)*data[0]['ColCount']) %}
+                        {% if j < data[0]['SumCount'] %}
+                            <div class="col-sm-4">
+                                <a href={{data[j+1]['Url']}} class="card myCard">
+                                    <div class="row DJ_pic_row">
+                                        <div class="col-md-4 col-xs-4 DJ_icon">
+                                            <img src={{data[j+1]['Icon']}}>
+                                        </div>
+                                        <div class="col-md-8 col-xs-8">
+                                            <div class="row DJ_p_row">
+                                                    <p>{{data[j+1]['Name']}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        {% end %}
+                    {% end %}
+                </div>
+            {% end %}
+
+
+        </div>
+
+	</body>
+	<!-- <script src="{{ static_url('index/index.js') }}"></script> -->
+</html>
