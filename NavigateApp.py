@@ -32,7 +32,7 @@ def LoadJson():
 def BuildJson():
     Jsondata = LoadJson()
     GuideData = []
-    colcount = 3
+    colcount = 4
     length = len(Jsondata)
     LineCount = 1
     if length > colcount:

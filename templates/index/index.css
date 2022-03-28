@@ -1,21 +1,44 @@
-.myCard{
-    height: 110px;
+.container{
+    background-color: aqua;
+}
+.col-sm-4{
+    margin-left: 10px;
     margin-top: 10px;
+}
+main{
+    display:flex;
+    flex-wrap:nowrap;
+    height:100vh;
+    height:-webkit-fill-available;
+    max-height:100vh;
+    overflow-x:auto;
+    overflow-y:hidden
+}
+
+.myCard{
+    height: 90px;
+    width: 220px;
+    margin-top: 10px;
+    
     text-shadow: 0 2px 2px rgb(0 0 0 / 30%);
     font: bold 25px "Helvetica Neue", Helvetica, sans-serif;
-    border-radius: 6px;
-    background: #79a78c;
+    border-radius: 2px;
+    background: #9696967e;
     box-shadow:  5px 5px 10px #e7e7e7,
              -5px -5px 10px #ffffff;
     /* cursor:pointer； */
-    transition: 0.3s;
+    /* transition: 0.3s; */
 
 }
-
-.myCard:hover{
-    background: #a7beae;
-
+.myCard a{
+    position:relative;
+    margin-top: 40px;
+    margin-left: 100px;
 }
+/* .myCard:hover{
+    background: #838383;
+
+} */
 .DJ_p_row{
     margin-top: 32px;
     margin-left: 15px;
